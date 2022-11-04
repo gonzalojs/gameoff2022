@@ -1,6 +1,6 @@
 extends BaseState
 
-export (float) var move_speed = 150
+export (float) var move_speed = 75
 
 func physics_process(delta: float) -> int:
 	var move = 0

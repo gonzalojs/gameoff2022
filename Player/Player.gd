@@ -4,9 +4,9 @@ extends KinematicBody2D
 var gravity = 6
 var velocity = Vector2.ZERO
 
-onready var animations = $AnimationPlayer
+onready var animations = $Animations
 onready var sprite = $Sprite
-onready var camera = $Camera2D
+onready var camera = $Camera
 onready var states = $state_manager
 
 

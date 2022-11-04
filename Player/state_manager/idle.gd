@@ -8,8 +8,6 @@ func input(event: InputEvent) -> int:
 	return State.Null
 
 func physics_process(delta: float) -> int:
-	if !player.available_jump:
-		player.available_jump = true
 	player.velocity.y += player.gravity
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 

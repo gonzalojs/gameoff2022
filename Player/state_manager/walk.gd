@@ -1,6 +1,6 @@
 extends BaseState
 
-export (float) var move_speed = 150
+export (float) var move_speed = 75
 
 func input(event: InputEvent) -> int:
 	if Input.is_action_just_pressed("jump"):

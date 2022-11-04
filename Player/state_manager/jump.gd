@@ -1,7 +1,7 @@
 extends BaseState
 
-export (float) var jump_force = 175
-export (float) var move_speed = 150
+export (float) var jump_force = 120
+export (float) var move_speed = 75
 
 func enter() -> void:
 	# This calls the base class enter function, which is necessary here
