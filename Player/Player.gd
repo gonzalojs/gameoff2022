@@ -1,16 +1,21 @@
+class_name Player
 extends KinematicBody2D
 
+var gravity = 6
+var velocity = Vector2.ZERO
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
+onready var animations = $AnimationPlayer
+onready var sprite = $Sprite
+onready var camera = $Camera2D
+onready var states = $state_manager
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	states.init(self)
 
+func _unhandled_input(event: InputEvent) -> void:
+	states.input(event)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+func _physics_process(delta: float) -> void:
+	states.physics_process(delta)
