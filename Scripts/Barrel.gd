@@ -36,7 +36,6 @@ func _on_Area2D_body_exited(body:Node) -> void:
 		push_left = false
 
 
-
 func _on_right_area_body_exited(body:Node) -> void:
 	if body.name == "Player":
 		push_right = false
